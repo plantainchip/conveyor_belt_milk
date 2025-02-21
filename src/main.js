@@ -15,21 +15,21 @@ kaplay({
 loadRoot("./"); // A good idea for Itch.io publishing later
 
 //load sprites first
-loadSprite("bean", "sprites/bean.png");
-loadSprite("grassbackground", "assets/cowbackground.png");
-loadSprite("plainbackground", "assets/plainbackground.png");
-loadSprite("cyanmilk", "assets/cyanmilk.png"); 
-loadSprite("magentamilk", "assets/magentamilk.png");
-loadSprite("yellowmilk", "assets/yellowmilk.png");
-loadSprite("keymilk", "assets/keymilk.png");
-loadSprite("title", "assets/title.png");
-loadAseprite("cow","assets/cowsprite.png", "assets/cowsprite.json");
-loadAseprite("conveyor", "assets/conveyorbelt.png", "assets/conveyorbelt.json");
-loadAseprite("splat", "assets/splat.png", "assets/splat.json");
-loadMusic("bgm", "assets/VillageSongWAV.wav");
-loadSound("cowjumpsfx", "assets/cowjumpsfx.mp3");
-loadSound("cowsplatsfx", "assets/cowsplatsfx.mp3");
-loadSound("cowmoosfx", "assets/cowmoosfx.mp3");
+loadSprite("bean", "./sprites/bean.png");
+loadSprite("grassbackground", "./assets/cowbackground.png");
+loadSprite("plainbackground", "./assets/plainbackground.png");
+loadSprite("cyanmilk", "./assets/cyanmilk.png"); 
+loadSprite("magentamilk", "./assets/magentamilk.png");
+loadSprite("yellowmilk", "./assets/yellowmilk.png");
+loadSprite("keymilk", "./assets/keymilk.png");
+loadSprite("title", "./assets/title.png");
+loadAseprite("cow","./assets/cowsprite.png", "./assets/cowsprite.json");
+loadAseprite("conveyor", "./assets/conveyorbelt.png", "./assets/conveyorbelt.json");
+loadAseprite("splat", "./assets/splat.png", "./assets/splat.json");
+loadMusic("bgm", "./assets/VillageSongWAV.wav");
+loadSound("cowjumpsfx", "./assets/cowjumpsfx.mp3");
+loadSound("cowsplatsfx", "./assets/cowsplatsfx.mp3");
+loadSound("cowmoosfx", "./assets/cowmoosfx.mp3");
 
 
 scene("start", () => {
