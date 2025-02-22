@@ -4,13 +4,13 @@ This is an infinite scrolling game where you try to collect milk or hop over it 
 
 ![Title Screen](/public/sprites/title.png)
 
-This was made with kaplay.js, previously known as kaboom.js. \\
-I followed the kaplay tutorial to refresh myself on javascript and \\
-I ended up adding a few more features. I kept changing more things \\
+This was made with kaplay.js, previously known as kaboom.js. \
+I followed the kaplay tutorial to refresh myself on javascript and \
+I ended up adding a few more features. I kept changing more things \
 until I ended up with this 🐄
 
-Play my game over on [itch](https://plantainchip.itch.io/conveyor-belt-milk) \\
-Or here from [github pages](https://plantainchip.github.io/conveyor_belt_milk/)
+Play my game over on [itch.io](https://plantainchip.itch.io/conveyor-belt-milk) 
+or here from my [github pages](https://plantainchip.github.io/conveyor_belt_milk/)
 
 
 
