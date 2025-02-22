@@ -1,4 +1,27 @@
-# Folder structure 😄
+# Conveyor Belt Milk
+
+This is an infinite scrolling game where you try to collect milk or hop over it 🥛
+
+![Title Screen](/public/sprites/title.png)
+
+This was made with kaplay.js, previously known as kaboom.js. \\
+I followed the kaplay tutorial to refresh myself on javascript and \\
+I ended up adding a few more features. I kept changing more things \\
+until I ended up with this 🐄
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Folder structure 😄
 
 - `src` - source code for your kaplay project
 - `dist` - distribution folder, contains your index.html, built js bundle and static assets
