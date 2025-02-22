@@ -13,7 +13,7 @@ Play my game over on [itch.io](https://plantainchip.itch.io/conveyor-belt-milk)
 or here from my [github pages](https://plantainchip.github.io/conveyor_belt_milk/)
 
 
-
+![first](/public/sprites/tutorial_sc.png) ![second](/public/sprites/screenshot.png)
 
 
 
