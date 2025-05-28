@@ -135,6 +135,7 @@ scene("game", () => {
             "obstacle",
         ]);
 
+        // if player dodges box and it moves off screen
         box.onUpdate(() => {
             if(box.pos.x <= 0 && !isNowBeef) {
                 box.destroy();
@@ -189,9 +190,24 @@ scene("game", () => {
 
 
 scene("lose", (score) => {
+    // localstorage here
+    let highscore = localStorage.getItem("hs");
+    if (highscore && score > highscore) {
+        localStorage.setItem("hs", score);
+        highscore = score;
+    }
+
+    if(!highscore) {
+        localStorage.setItem("hs", score);
+        highscore = score;
+    }
+    
+    
+
     add([ sprite("plainbackground"), pos(0, 0),]);
     add([text("Game Over"), pos(center()), scale(1.3), anchor("center"), color(255,255,219)]);
-    add([text("Score: " + score), pos(width() / 2, height() / 2 + 80), anchor("center"), scale(0.6), color(255,255,219)]);
+    add([text("Score: " + score + "   Highscore: " + (highscore || 0)), pos(width() / 2, height() / 2 + 80), anchor("center"), scale(0.6), color(255,255,219)]);
+
     add([text("Click to Restart"), pos(width() / 2, height() / 2 + 120), anchor("center"), scale(0.6), color(255,255,219)]);
     onClick(() => go("game"));
     onKeyPress("space", () => go("game")); 
