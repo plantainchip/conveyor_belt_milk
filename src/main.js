@@ -1,5 +1,5 @@
 import {
-    compareObjects
+    compareObjects, mobileCheck
 } from "./util";
 
 import kaplay from "kaplay";
@@ -97,6 +97,7 @@ scene("game", () => {
             cowplayer.play("jump");
         }
     });
+
     onTouchStart(() => {
         if (cowplayer.isGrounded()) {
             play("cowjumpsfx", {
@@ -210,6 +211,7 @@ scene("username", (score) => {
     let username = localStorage.getItem("user");
     add([ sprite("plainbackground"), pos(0, 0),]);
     add([text("Type your name and press enter"), pos(width()/2,height()/2 - 50), scale(0.5), anchor("center"), color(0,0,0)]);
+
     const obj = add([   
         text("______"),
         textInput(),
@@ -218,15 +220,27 @@ scene("username", (score) => {
         scale(0.5),
     ])
 
-    obj.hasFocus = true
-    obj.onInput(()=>{
-        console.log(obj.typedText)
-        localStorage.setItem("user", obj.typedText)
-        username = obj.typedText
-    })
+    
+    if(mobileCheck()){
+        username = prompt("enter username")
+        localStorage.setItem("user", username)
+        go("lose",score);
+        
+    } else {
+        obj.onInput(()=>{
+            console.log(obj.typedText)
+            localStorage.setItem("user", obj.typedText)
+            username = obj.typedText
+        })
+    }
+
+    
+
 
     // add([text(username), pos(width()/2,60), scale(1.3), anchor("center"), color(0,0,0)]);
-    onKeyPress("enter", () => go("lose",score))
+    onKeyPress("enter", () => go("lose",score));
+    onTouchStart(() => go("lose",score));
+    
 
 })
 
@@ -254,6 +268,7 @@ scene("lose", (score) => {
     add([text("Click to Restart"), pos(width() / 2, height() / 2 + 180), anchor("center"), scale(0.6), color(255,255,219)]);
     onClick(() => go("game"));
     onKeyPress("space", () => go("game")); 
+    onTouchStart(() => go("game"));
 });
 
 go("start");
