@@ -206,6 +206,7 @@ scene("game", () => {
 })
 
 scene("username", (score) => {
+    music.paused = true;
 
     // check if localStorage.getItem("user") is true or not in game scene
     let username = localStorage.getItem("user");
